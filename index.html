@@ -1,60 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bass Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #111;
-      color: white;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 5px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: #1c1c1c;
-      border: 1px solid #333;
-      border-radius: 16px;
-      padding: 16px;
-    }
-
-    a {
-      color: #8ab4ff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <h1>Bass Dashboard</h1>
-  <p>Personal command center.</p>
+  <header class="site-header">
+    <h1>Bass Dashboard</h1>
+    <p>Congress, House, Senate, and Supreme Court updates</p>
+  </header>
 
-  <div class="grid">
-    <div class="card">
-      <h2>Government</h2>
-      <p>Congress, Senate, House, and Supreme Court feeds will go here.</p>
-      <a href="https://www.congress.gov/" target="_blank">Congress.gov</a>
-    </div>
+  <main>
+    <section class="controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="congress">Congress</button>
+      <button class="filter-btn" data-filter="house">House</button>
+      <button class="filter-btn" data-filter="senate">Senate</button>
+      <button class="filter-btn" data-filter="court">Supreme Court</button>
+    </section>
 
-    <div class="card">
-      <h2>Astronomy</h2>
-      <p>Moon phase, weather, and sky conditions will go here.</p>
-    </div>
+    <section id="feed" class="feed">
+      <p class="loading">Loading feed...</p>
+    </section>
+  </main>
 
-    <div class="card">
-      <h2>Life</h2>
-      <p>Calendar, reminders, and personal systems will go here.</p>
-    </div>
-  </div>
+  <footer>
+    <p>Personal command center · Public government sources</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
