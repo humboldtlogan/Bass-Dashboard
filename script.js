@@ -1,4 +1,4 @@
-const CONGRESS_API_KEY = "PASTE_YOUR_CONGRESS_API_KEY_HERE";
+const CONGRESS_API_KEY = "xcUWg4JMXVmsavWu1Xik7dhBSYPJGTFmULrddbdh";
 
 const feedEl = document.getElementById("feed");
 const buttons = document.querySelectorAll(".filter-btn");
